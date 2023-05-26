@@ -5,30 +5,30 @@ const heroSchema = Schema({
   nickname: {
     type: String,
   },
-  real_name: {
+  realName: {
     type: String,
   },
-  origin_description: {
+  description: {
     type: String,
   },
   superpowers: {
     type: String,
   },
-  catch_phrase: {
+  catchPhrase: {
     type: String,
   },
-  imgURL: {
-    type: String,
-    required: true,
+  imgSet: {
+    type: [String],
   },
 });
 
 const add = Joi.object({
   nickname: Joi.string().required(),
-  real_name: Joi.string().required(),
-  origin_description: Joi.string().required(),
+  realName: Joi.string().required(),
+  description: Joi.string().required(),
   superpowers: Joi.string().required(),
-  catch_phrase: Joi.string().required(),
+  catchPhrase: Joi.string().required(),
+  imgSet: Joi.array().required(),
 });
 
 const schemas = { add };

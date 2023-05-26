@@ -1,13 +1,15 @@
 const getAllHeroes = require("./getAllHeroes");
-const getContactById = require("./getContactById");
+const getHeroById = require("./getHeroById");
 const addHero = require("./addHero");
 const updateHero = require("./updateHero");
 const removeHero = require("./removeHero");
+const uploadImg = require("./uploadImg");
 
 module.exports = {
   getAllHeroes,
-  getContactById,
+  getHeroById,
   addHero,
   updateHero,
   removeHero,
+  uploadImg,
 };

@@ -2,8 +2,8 @@ const { isValidObjectId } = require("mongoose");
 const { createError } = require("../helpers/createError");
 
 const isValidId = (req, res, next) => {
-  const { contactId } = req.params;
-  const result = isValidObjectId(contactId);
+  const { heroId } = req.params;
+  const result = isValidObjectId(heroId);
   if (!result) {
     const error = createError(400, "Invalid id");
     return next(error);

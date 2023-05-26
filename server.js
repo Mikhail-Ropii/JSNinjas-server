@@ -2,7 +2,10 @@ const app = require("./app");
 const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
 
-const { DB_HOST, PORT = 3000 } = process.env;
+// const { DB_HOST, PORT = 3000 } = process.env;
+const PORT = 3000;
+const DB_HOST =
+  "mongodb+srv://mainUser:qwerty12345@cluster0.vuhy5ts.mongodb.net/superheroes?retryWrites=true&w=majority";
 
 mongoose
   .connect(DB_HOST)

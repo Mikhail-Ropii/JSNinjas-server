@@ -1,13 +1,13 @@
 const { Hero } = require("../../models/hero");
 const { createError } = require("../../helpers/createError");
 
-const removeHero = async (req, res, next) => {
+const getHeroById = async (req, res, next) => {
   const { heroId } = req.params;
-  const result = await Hero.findByIdAndRemove(heroId);
+  const result = await Hero.findById(heroId);
   if (!result) {
     throw createError(404);
   }
-  res.json({ message: "Superhero deleted" });
+  res.json(result);
 };
 
-module.exports = removeHero;
+module.exports = getHeroById;
